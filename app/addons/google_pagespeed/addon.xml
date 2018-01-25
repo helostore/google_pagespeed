@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>google_pagespeed</id>
+    <version>1.0.1</version>
+    <name>Google PageSpeed</name>
+    <description>This is a lightweight add-on that gives you control to some functions of Google PageSpeed (such as clearing the cache) | Created with love by HELOstore.com</description>
+    <priority>1010111</priority>
+    <position>0</position>
+    <status>active</status>
+    <has_icon>N</has_icon>
+    <default_language>en</default_language>
+    <authors>
+        <author>
+            <name>HELOstore</name>
+            <email>support@helostore.com</email>
+            <url>https://helostore.com/</url>
+        </author>
+    </authors>
+    <settings layout="separate" edition_type="ROOT,ULT:VENDOR">
+        <sections>
+            <section id="general">
+                <name>Product page</name>
+                <items>
+                    <item id="admin_url">
+                        <type>input</type>
+                        <name>PageSpeed admin URL</name>
+                    </item>
+
+                    <item id="info">
+                        <type>info</type>
+                        <handler>fn_google_pagespeed_info</handler>
+                    </item>
+
+                    <item id="info">
+                        <type>info</type>
+                        <handler>fn_sidekick_info,google_pagespeed</handler>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+</addon>

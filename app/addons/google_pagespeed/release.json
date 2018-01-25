@@ -1,0 +1,39 @@
+[
+    {
+        "version": "1.0.1",
+        "releaseDate": false,
+        "releaseTimestamp": "ambiguous",
+        "hash": "fatal:",
+        "commits": [
+            "[2018-01-25] Bumped version to 1.0.1",
+            "fatal: ambiguous argument 'e30d73f4ae7bd881ac1455ce189f13ffb9dc8d9f..HEAD': unknown revision or path not in the working tree."
+        ]
+    },
+    {
+        "version": "1.0.0",
+        "releaseDate": "2018-01-23 08:52:24",
+        "releaseTimestamp": "1516740744",
+        "hash": "e30d73f4ae7bd881ac1455ce189f13ffb9dc8d9f",
+        "commits": [
+            "[2018-01-25] Bumped version to 1.0.0",
+            "[2018-01-23]\tSet production status to specific releases",
+            "[2018-01-23]\tUpdate scripts",
+            "[2018-01-23]\tMisc",
+            "[2018-01-21]\tUpdate migration steps",
+            "[2018-01-21]\tMinor tweaks",
+            "[2018-01-21]\tFix CS-Cart with include paths",
+            "[2017-12-30]\tUpdate migration scripts",
+            "[2017-12-28]\tFix compatibility with PHP 7, reserved keyword misuse",
+            "[2017-12-20]\tUpdate ADLS migration view",
+            "[2017-12-20]\tIgnore dummy addon",
+            "[2017-12-20]\tUpdate test.php",
+            "[2017-12-20]\tDisplay date in footer, dev env",
+            "[2017-12-20]\tMerge branch 'develop' of ssh:\/\/disruptive.academy:64246\/wsergio\/helostore into develop",
+            "[2017-12-20]\tUpdate ADLS migration script",
+            "[2017-11-27]\tCritial Vulnerability fix in admin",
+            "[2017-11-27]\tMigration scripts",
+            "[2017-11-27]\tFix migration script, do not assign subscribable option to free products",
+            "[2017-11-18]\tBugfix in migration scripts"
+        ]
+    }
+]

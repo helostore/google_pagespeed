@@ -1,0 +1,33 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US"
+
+msgctxt "Addons::name::google_pagespeed"
+msgid "Google PageSpeed"
+msgstr "Google PageSpeed"
+
+msgctxt "Addons::description::google_pagespeed"
+msgid "This is a lightweight add-on that gives you control to some functions of Google PageSpeed (such as clearing the cache) | Created with love by HELOstore.com"
+msgstr "This is a lightweight add-on that gives you control to some functions of Google PageSpeed (such as clearing the cache) | Created with love by HELOstore.com"
+
+msgctxt "SettingsOptions::google_pagespeed::admin_url"
+msgid "PageSpeed admin URL"
+msgstr "PageSpeed admin URL"
+
+msgctxt "SettingsTooltips::google_pagespeed::admin_url"
+msgid "Example: <br /> - an admin URL which is password protected (highly recommended) with .htpasswd: <br /><code>https://mywebuser:mywebpasswd@my-domain.com/pagespeed_admin</code> <br /> <br /> - an admin which is not password protected (not recommended) with .htpasswd: <br /><code>https://my-domain.com/pagespeed_admin</code>"
+msgstr "Example: <br /> - an admin URL which is password protected (highly recommended) with .htpasswd: <br /><code>https://mywebuser:mywebpasswd@my-domain.com/pagespeed_admin</code> <br /> <br /> - an admin which is not password protected (not recommended) with .htpasswd: <br /><code>https://my-domain.com/pagespeed_admin</code>"
+
+msgctxt "Languages::google_pagespeed.clear_cache"
+msgid "Clear cache (CS-Cart + PageSpeed + OpCache)"
+msgstr "Clear cache (CS-Cart + PageSpeed + OpCache)"
+
+msgctxt "Languages::google_pagespeed.admin_url_not_set"
+msgid "The PageSpeed admin URL is not set in the add-on's settings. Please set it up first."
+msgstr "The PageSpeed admin URL is not set in the add-on's settings. Please set it up first."
+
+msgctxt "Languages::google_pagespeed.info"
+msgid "To use the new function for clearing the cache, navigate in the main menu to <code>Administration &gt; Storage &gt; Clear cache (CS-Cart + PageSpeed + OpCache)</code>."
+msgstr "To use the new function for clearing the cache, navigate in the main menu to <code>Administration &gt; Storage &gt; Clear cache (CS-Cart + PageSpeed + OpCache)</code>."
