@@ -1,5 +1,14 @@
 [
     {
+        "version": "1.0.2",
+        "releaseDate": false,
+        "releaseTimestamp": "ambiguous",
+        "hash": "fatal:",
+        "commits": [
+            "[2018-02-24] Bumped version to 1.0.2"
+        ]
+    },
+    {
         "version": "1.0.1",
         "releaseDate": false,
         "releaseTimestamp": "ambiguous",
