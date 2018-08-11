@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <addon scheme="3.0">
     <id>google_pagespeed</id>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <name>Google PageSpeed</name>
     <description>This is a lightweight add-on that gives you control to some functions of Google PageSpeed (such as clearing the cache) | Created with love by HELOstore.com</description>
     <priority>1010111</priority>
