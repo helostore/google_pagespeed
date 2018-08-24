@@ -22,12 +22,6 @@ if ($mode == 'clear_cache') {
     }
 
     $settings = Registry::get('addons.google_pagespeed');
-    $adminUrl = $settings['admin_url'];
-    if (empty($adminUrl)) {
-        fn_set_notification('E', __('error'), __('google_pagespeed.admin_url_not_set'));
-
-        return array(CONTROLLER_STATUS_REDIRECT);
-    }
 
     $message = array();
     $result = fn_clear_cache();
@@ -43,24 +37,30 @@ if ($mode == 'clear_cache') {
         }
     }
 
-    $ch = curl_init($adminUrl . "/cache?purge=*");
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    $response = curl_exec($ch);
-    $curlError = curl_error($ch);
-    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    curl_close($ch);
-    if ($response === false) {
-        $message[] = "PageSpeed: FAIL (${$curlError})";
-    } else {
-        if ($httpCode === 200) {
-            $response = (! is_string($response) ? json_encode($response) : $response);
-            $message[] = "PageSpeed: OK (${response})";
+    $adminUrl = $settings['admin_url'];
+    if (!empty($adminUrl)) {
+        $ch = curl_init($adminUrl . "/cache?purge=*");
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $response = curl_exec($ch);
+        $curlError = curl_error($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        if ($response === false) {
+            $message[] = "PageSpeed: FAIL (${$curlError})";
         } else {
-            $message[] = "PageSpeed: FAIL (httpCode=${httpCode})";
+            if ($httpCode === 200) {
+                $response = (! is_string($response) ? json_encode($response) : $response);
+                $message[] = "PageSpeed: OK (${response})";
+            } else {
+                $message[] = "PageSpeed: FAIL (httpCode=${httpCode})";
+            }
         }
+    } else {
+        fn_set_notification('W', __('warning'), __('google_pagespeed.admin_url_not_set'));
     }
+
 
     $message = implode("<br />", $message);
     fn_set_notification('N', __('notice'), 'Results: <br />' . $message, 'K');
